@@ -13,29 +13,30 @@
 int main() {
     // TODO: change the string instead of sample.
     const char *paris_rules[] = {
-        "Paris Rule 1: No eating in the library",
-        "Paris Rule 2: Mandatory attendance for morning classes",
-        "Paris Rule 3: Silence must be maintained in study areas",
-        "Paris Rule 4: No smoking on campus grounds",
-        "Paris Rule 5: Mobile phones must be on silent mode",
-        "Paris Rule 6: Proper attire is required in laboratories",
-        "Paris Rule 7: ID cards must be worn at all times",
-        "Paris Rule 8: No unauthorized access to restricted areas",
-        "Paris Rule 9: Clean up after using common areas",
-        "Paris Rule 10: Bicycles should be parked in designated areas"
+	"1) Don't touch the cat called moulinette",
+	"2) Don't smoke after 9PM in front of Paul building",
+	"3) Don't kick the vending machine",
+	"4) Don't put your bottle on your desk",
+	"5) Don't eat food inside clusters or drink anything not water",
+	"6) Don't disrespect staff members",
+	"7) Don't sleep inside clusters",
+	"8) Always have your badge on yourself",
+        "9): Clean up after using common areas",
+        "10): Bicycles should be parked in designated areas"
     };
 
     const char *seoul_rules[] = {
-        "Seoul Rule 1: No food or drinks in classrooms",
-        "Seoul Rule 2: Attendance is required for all lectures",
-        "Seoul Rule 3: Keep noise levels down in the dormitories",
-        "Seoul Rule 4: No alcohol on campus premises",
-        "Seoul Rule 5: Respect quiet hours after 10 PM",
-        "Seoul Rule 6: Wear student uniform during official events",
+	"1) Entering the cluster while under the influence of alcohol.",
+	"2) Playing video games in the cluster.",
+	"3) Wearing attire that could be mistaken for a 42 Seoul staff uniform (e.g., clothing with “42 STAFF” or “42 BOCAL” labels) or pretending to be a staff member during La Piscine.",
+	"4) Leaving a visitor accompanied by a trainee alone within the 42 Seoul facility.",
+	"5) Using a computer’s speakers within the cluster.",
         "Seoul Rule 7: Display student ID when entering buildings",
-        "Seoul Rule 8: Unauthorized solicitation is prohibited",
-        "Seoul Rule 9: Dispose of waste in proper bins",
-        "Seoul Rule 10: Vehicles must be registered with campus security"
+	"6) Intentionally matching assessments with specific peers.",
+	"7) Attending the school while expelled or during an account suspension period.",
+	"8) Misusing someone else’s access badge.",
+	"9) Failing to conduct continuous in-person peer assessments from start to finish (with exceptions for approved online assessments).",
+	"10) Unplugging the cluster PC power cable or accessory cables without permission."
     };
 
     int campus_choice;
