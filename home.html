@@ -7,25 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    <p>hello</p>
-    <div class="xd">
+    <div class="center">
         <img id="gif" src="./chakkal.gif" alt="">
     </div>
     <div>
-        <p class="xd">
-            <a href="/tigGenerator.html">Do you wanna get TIG'D ?</a>
+        <p class="center" id="fade">
+            <button class="button-3">
+                <a href="/tigGenerator.html">Do you wanna get TIG'D ? ;)</a>
+            </button>
         </p>
     </div>
 </body>
 
 <script>
     window.onload = function() {
-        var gif = document.getElementById('gif');
-        var src = gif.src;
+        let gif = document.getElementById('gif');
+        let src = gif.src;
+        let btn = document.getElementById('fade')
         
-        // Set src to a new URL by appending a timestamp to ensure it reloads
+        // force reload by appending time on gif, so it plays only once on load
         gif.src = '';
-        gif.src = src + '?t=' + new Date().getTime(); // Append timestamp to force reload
+        gif.src = src + '?t=' + new Date().getTime();
+
+        // quick script to make the button fade in
+        btn.style.opacity = 0;
+        setTimeout(() => {
+
+            let id = setInterval(() => {
+                if (btn.style.opacity == "1")
+                    clearInterval(id);
+                btn.style.opacity = (parseFloat(btn.style.opacity) + 0.1).toString();
+         
+            }, "50")
+        }, "3000");
+
+
     };
 </script>
 </html>
