@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello</p>
+    <div class="xd">
+        <img id="gif" src="./chakkal.gif" alt="">
+    </div>
+    <div>
+        <p class="xd">
+            <a href="/tigGenerator.html">Do you wanna get TIG'D ?</a>
+        </p>
+    </div>
+</body>
+
+<script>
+    window.onload = function() {
+        var gif = document.getElementById('gif');
+        var src = gif.src;
+        
+        // Set src to a new URL by appending a timestamp to ensure it reloads
+        gif.src = '';
+        gif.src = src + '?t=' + new Date().getTime(); // Append timestamp to force reload
+    };
+</script>
+</html>
