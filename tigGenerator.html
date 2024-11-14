@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Campus Rule Generator</title>
+    <style>
+      body {
+        background-color: #f0f0f5;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        color: #333;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #333;
+        font-size: 2.8em;
+        margin-bottom: 0;
+      }
+
+      p {
+        color: #666;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+      }
+
+      .campus-selection button {
+        padding: 12px 25px;
+        margin: 10px;
+        font-size: 1.1em;
+        cursor: pointer;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        color: white;
+        font-weight: bold;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* Paris button - red */
+      .campus-selection button.paris {
+        background-color: #e74c3c;
+        border-color: #c0392b;
+      }
+      .campus-selection button.paris:hover {
+        background-color: #c0392b;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(231, 76, 60, 0.2);
+      }
+
+      /* Seoul button - blue */
+      .campus-selection button.seoul {
+        background-color: #3498db;
+        border-color: #2980b9;
+      }
+      .campus-selection button.seoul:hover {
+        background-color: #2980b9;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+      }
+
+      .rule-box {
+        background-color: #ffffff;
+        border: 2px dashed #3498db;
+        padding: 20px;
+        margin-top: 20px;
+        display: inline-block;
+        border-radius: 10px;
+        max-width: 400px;
+      }
+
+      .rule-text {
+        font-size: 1.3em;
+        color: #e74c3c;
+      }
+
+      .cute-image {
+        width: 150px;
+        margin-top: 20px;
+        opacity: 0.9;
+      }
+
+      .footer {
+        margin-top: 50px;
+        font-size: 0.9em;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>How to TIG</h1>
+    <p>Select a campus to see a random rule!</p>
+
+    <div class="campus-selection">
+      <button class="paris" onclick="selectCampus('paris')">
+        Paris Campus
+      </button>
+      <button class="seoul" onclick="selectCampus('seoul')">
+        Seoul Campus
+      </button>
+    </div>
+
+    <div id="ruleDisplay" style="display: none">
+      <div class="rule-box">
+        <p class="rule-text" id="ruleText"></p>
+      </div>
+    </div>
+
+    <div class="footer">Have a great day!</div>
+
+    <script>
+      const parisRules = [
+        "Touch the cat called Moulinette",
+        "Smoke after 9PM in front of Paul building",
+        "Kick the vending machine",
+        "Place your bottle on your desk",
+        "Enjoy food and drinks other than water inside clusters",
+        "Feel free to speak informally to staff members",
+        "Take a nap inside clusters",
+        "No need to carry your badge with you",
+        "Unplug the cluster PC power cable or accessory cables as you like",
+      ];
+
+      const seoulRules = [
+        "Enter the cluster even if under the influence of alcohol",
+        "Play video games in the cluster",
+        "Wear clothing that resembles the 42 Seoul staff uniform and act as a staff member during La Piscine",
+        "Leave visitors unaccompanied within the 42 Seoul facility",
+        "Use the computer’s speakers within the cluster",
+        "Coordinate assessments with specific peers intentionally",
+        "Attend the school even if expelled or during an account suspension period",
+        "Use someone else’s access badge freely",
+        "Skip parts of in-person peer assessments or conduct them remotely without prior approval",
+      ];
+
+      function selectCampus(campus) {
+        let rules;
+        if (campus === "paris") {
+          rules = parisRules;
+        } else if (campus === "seoul") {
+          rules = seoulRules;
+        } else {
+          alert("Invalid campus selection.");
+          return;
+        }
+
+        const randomIndex = Math.floor(Math.random() * rules.length);
+        const randomRule = rules[randomIndex];
+        document.getElementById("ruleText").textContent = randomRule;
+        document.getElementById("ruleDisplay").style.display = "block";
+        document
+          .getElementById("ruleDisplay")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
