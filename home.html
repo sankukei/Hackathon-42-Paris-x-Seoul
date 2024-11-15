@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script type="module">
+        import Swup from 'https://unpkg.com/swup@4?module';
+        const swup = new Swup();
+      </script>
     <title>Document</title>
 </head>
 <body>
-    <div class="center">
-        <img id="gif" src="./chakkal.gif" alt="">
-    </div>
-    <div class="center">
-        <p class="typewriter" id="text">hackaton Paris ❤ Seoul 2024</p>
-    </div>
-    <br><br>
-    <div>
-        <p class="center" id="fade">
-            <button class="button-3">
-                <a href="/tigGenerator.html">Do you wanna get TIG'D ? ;)</a>
-            </button>
-        </p>
-    </div>
+    <main id="swup" class="transition-fade">
+        <div class="center">
+            <img id="gif" src="./chakkal.gif" alt="">
+        </div>
+        <div class="center">
+            <p class="typewriter" id="text">hackaton Paris ❤ Seoul 2024</p>
+        </div>
+        <br><br>
+        <div>
+            <p class="center" id="fade">
+                <button class="button-3">
+                    <a href="/tigGenerator.html">Do you wanna get TIG'D ? ;)</a>
+                </button>
+            </p>
+        </div>
+    </main>
 </body>
 
 <script>
