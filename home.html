@@ -28,12 +28,18 @@
         let gif = document.getElementById('gif');
         let src = gif.src;
         let btn = document.getElementById('fade')
+        let typewriter = document.getElementById("text")
         
-        // force reload by appending time on gif, so it plays only once on load
+        typewriter.style.opacity = "0";
+
+        setTimeout(() => {
+
+            typewriter.style.opacity = "1";
+        }, "2100");
+
         gif.src = '';
         gif.src = src + '?t=' + new Date().getTime();
 
-        // quick script to make the button fade in
         btn.style.opacity = 0;
         setTimeout(() => {
 
@@ -43,7 +49,7 @@
                 btn.style.opacity = (parseFloat(btn.style.opacity) + 0.1).toString();
          
             }, "50")
-        }, "3000");
+        }, "4500");
 
 
     };
