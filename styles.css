@@ -2,6 +2,34 @@ body {
     background-color: #1E1E1E;
 }
 
+#text {
+
+  color: #2c974b;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .10em;
+  animation: 
+    
+    typing 2s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
+}
 
 .center {
 
@@ -37,7 +65,7 @@ a:link {
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
-  padding: 6px 16px;
+  padding: 8px 16px;
   position: relative;
   text-align: center;
   text-decoration: none;
